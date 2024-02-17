@@ -29,14 +29,54 @@ function verifyCredentials($db, $email, $inputPassword) {
     }
 }
 
+function checkIfVerifiedByAdmin($db, $email) {
+    $verifiedQuery = $db -> prepare('SELECT verified_status FROM Users WHERE email = :email');
+    $verifiedQuery -> bindValue(':email', $email, SQLITE3_TEXT);
+    $result = $verifiedQuery -> execute();
+
+    $row = $result -> fetchArray(SQLITE3_ASSOC);
+
+    // verified_status '1' means verified by admin, '0' means not verified
+    return $row['verified_status'];
+}
+
+// Store the current user's ID in a session variable so it can be referenced in other pages for database queries
+function getUserId($db, $email) {
+    $userIdQuery = $db -> prepare('SELECT id FROM Users WHERE email = :email');
+    $userIdQuery -> bindValue(':email', $email, SQLITE3_TEXT);
+    $result = $userIdQuery -> execute();
+
+    $row = $result -> fetchArray(SQLITE3_ASSOC);
+
+    return $row['id'];
+}
+
 if(isset($_POST['login'])) {
     $email = $_POST['Email'];
     $password = $_POST['Password']; 
 
-    $userVerified = verifyCredentials($db, $email, $password);
+    $credentialsVerified = verifyCredentials($db, $email, $password);
 
-    if ($userVerified) {
-        // TODO: COOKIE, session variable, redirect, etc
+    if ($credentialsVerified) {
+        // TODO: COOKIE....? 
+        $verifiedByAdmin = checkIfVerifiedByAdmin($db, $email);
+        if ($verifiedByAdmin) {
+            echo 'User verified by admin. Access granted.';
+
+            $id = getUserId($db, $email);
+        
+            // Set session variables
+            $_SESSION['id'] = $id;
+            $_SESSION['authorized'] = true;
+            
+            header('Location: ../landing/landing.php');
+        } else {
+            $_SESSION['error'] = 'User not verified by admin. Access denied.';
+        }
+
+    } else {
+        $_SESSION['error'] = 'Invalid credentials. Access denied.';
+        header('Location: login.php');
     }
 }
 

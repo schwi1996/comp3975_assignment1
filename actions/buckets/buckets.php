@@ -1,4 +1,9 @@
-<?php include("../../setup/inc_header.php"); ?>
+<?php 
+require_once('../../utils.php');
+session_start();
+checkUserAuthentication();
+
+include("../../setup/inc_header.php"); ?>
 
 <h1>View Buckets</h1>
 

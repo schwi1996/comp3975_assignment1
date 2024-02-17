@@ -1,11 +1,7 @@
 <?php 
+require_once('../../utils.php');
 session_start();
-
-// If the user is not logged in, redirect to the login page
-if (!isset($_SESSION['authorized']) || $_SESSION['authorized'] !== true) {
-    header('Location: ../login/login.php');
-    exit;
-}
+checkUserAuthentication();
 
 include("../../setup/inc_header.php"); ?>
 

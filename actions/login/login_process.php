@@ -61,13 +61,13 @@ if(isset($_POST['login'])) {
         // TODO: COOKIE....? 
         $verifiedByAdmin = checkIfVerifiedByAdmin($db, $email);
         if ($verifiedByAdmin) {
-            echo 'User verified by admin. Access granted.';
+            
+            session_regenerate_id(true); // Regenerate session ID to prevent session fixation attacks
 
             $id = getUserId($db, $email);
         
-            // Set session variables
+            // store the user's ID in a session variable to check if the user is logged in on other pages
             $_SESSION['id'] = $id;
-            $_SESSION['authorized'] = true;
             
             header('Location: ../landing/landing.php');
         } else {

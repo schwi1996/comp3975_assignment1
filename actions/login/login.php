@@ -1,14 +1,22 @@
-<?php include("../../setup/inc_header.php"); ?>
+<?php 
+session_set_cookie_params(3600); // 1 hour session cookie
+session_start();
+include("../../setup/inc_header.php"); 
+?>
 
 <h1>Login as Existing User</h1>
 
 <div class="row">
     <div class="col-md-4">
-        <?php if (!empty($error_message)): ?>
+
+        <?php if (isset($_SESSION['error'])): ?>
             <div class="alert alert-danger">
-                <?php echo htmlspecialchars($error_message); ?>
+                <?php echo htmlspecialchars($_SESSION['error']); ?>
             </div>
-        <?php endif; ?>
+        <?php 
+            unset($_SESSION['error']); // remove the error message from the session, so it doesn't appear again
+        endif; ?>
+
         <form action="login_process.php" method="post">
 
             <div class="form-group">

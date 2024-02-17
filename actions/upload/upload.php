@@ -6,14 +6,13 @@
         <label for="fileInput">Upload a CSV file to start organizing your finances!</label>
         <input type="file" id="fileInput" accept=".csv" required>
         <br><br>
-        <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitForm()">Submit</button>
         
 </form>
 <br><br>
 <div class="form-group">
                 <a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>
                 &nbsp;&nbsp;&nbsp;
-                <input type="submit" value="Login" name="login" class="btn btn-success" />
+                <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitForm()">Submit</button>
 </div>
 
 <script>

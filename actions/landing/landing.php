@@ -1,7 +1,9 @@
 <?php 
 require_once('../../utils.php');
-session_start();
+require_once('../../setup/config_session.inc.php');
 checkUserAuthentication();
+
+var_dump($_SESSION);
 
 include("../../setup/inc_header.php"); ?>
 

@@ -1,6 +1,8 @@
-<?php 
-include("../../setup/inc_header.php"); 
+<?php
+define('BYPASS_AUTH', true);
+
 require_once('../../setup/config_session.inc.php');
+include("../../setup/inc_header.php"); 
 require_once('register_view.inc.php');
 ?>
 

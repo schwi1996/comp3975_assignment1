@@ -1,10 +1,6 @@
 <?php 
 require_once('../../utils.php');
 require_once('../../setup/config_session.inc.php');
-checkUserAuthentication();
-
-var_dump($_SESSION);
-
 include("../../setup/inc_header.php"); ?>
 
 <h1>Welcome Back!</h1>

@@ -1,8 +1,6 @@
 <?php 
+require_once('../../setup/config_session.inc.php');
 require_once('../../utils.php');
-session_start();
-checkUserAuthentication();
-
 include("../../setup/inc_header.php"); ?>
 
 <h1>Update Transaction</h1>

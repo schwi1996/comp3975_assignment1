@@ -1,4 +1,11 @@
-<?php include("../../setup/inc_header.php"); 
+<?php 
+require_once('../../setup/config_session.inc.php');
+require_once('../../utils.php');
+
+echo $_SESSION['id'];
+
+
+include("../../setup/inc_header.php"); 
     $error_message = isset($_GET['error']) ? $_GET['error'] : '';
 ?>
 

@@ -1,7 +1,9 @@
 <?php 
-session_set_cookie_params(3600); // 1 hour session cookie
-session_start();
+define('BYPASS_AUTH', true);
+
+require_once('../../setup/config_session.inc.php');
 include("../../setup/inc_header.php"); 
+require_once('login_view.inc.php');
 ?>
 
 <h1>Login as Existing User</h1>
@@ -9,24 +11,18 @@ include("../../setup/inc_header.php");
 <div class="row">
     <div class="col-md-4">
 
-        <?php if (isset($_SESSION['error'])): ?>
-            <div class="alert alert-danger">
-                <?php echo htmlspecialchars($_SESSION['error']); ?>
-            </div>
-        <?php 
-            unset($_SESSION['error']); // remove the error message from the session, so it doesn't appear again
-        endif; ?>
-
-        <form action="login_process.php" method="post">
+        <?php check_login_errors(); ?> 
+        
+        <form action="login_contr.inc.php" method="post">
 
             <div class="form-group">
                 <label for="Email" class="control-label">Email</label>
-                <input for="email" class="form-control" name="Email" id="Email" required/>
+                <input for="email" class="form-control" name="Email" id="Email"/>
             </div>
 
             <div class="form-group">
                 <label for="Password" class="control-label">Password</label>
-                <input for="password" class="form-control" name="Password" id="Password" required/>
+                <input for="password" class="form-control" name="Password" id="Password"/>
                 <input type="checkbox" id="togglePassword"> Show Password
             </div>
 

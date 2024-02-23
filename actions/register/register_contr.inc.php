@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+define('BYPASS_AUTH', true);
 
 function is_input_empty(string $email, string $password, string $first_name, string $last_name) {
     if (empty($email) || empty($password) || empty($first_name) || empty($last_name)) {

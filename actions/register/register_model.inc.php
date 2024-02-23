@@ -1,6 +1,7 @@
 <?php 
 
 declare(strict_types=1);
+define('BYPASS_AUTH', true);
 
 function createUsersTableIfNotExists(object $db) { // TODO: move this elsewhere, to database setup
 

@@ -2,4 +2,5 @@
 expense.sqlite
 
 # Environment variables
+/vendor/
 .env

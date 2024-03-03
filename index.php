@@ -1,6 +1,8 @@
 <?php include("setup/inc_header.php"); 
 
 require_once('connect_database.php');
+require_once('database_setup.php');
+require_once('custom_error_handler.inc.php');
 ?>
 
 

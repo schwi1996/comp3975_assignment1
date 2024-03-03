@@ -1,0 +1,5 @@
+# SQLite Database (temporary)
+expense.sqlite
+
+# Environment variables
+.env

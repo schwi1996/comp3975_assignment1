@@ -60,10 +60,10 @@ $SQL_create_buckets = "CREATE TABLE IF NOT EXISTS Buckets (
 $db->exec($SQL_create_buckets);
 
 // Check if table is empty
-// $tableName = 'Transactions';
-// $query_rows = $db ->query("SELECT COUNT(*) AS 'rowCount' FROM $tableName");
-// $result = $query_rows->fetchArray(SQLITE3_ASSOC);
-// $rowCount = $result['rowCount'];
+$tableName = 'Transactions';
+$query_rows = $db ->query("SELECT COUNT(*) AS 'rowCount' FROM $tableName");
+$result = $query_rows->fetchArray(SQLITE3_ASSOC);
+$rowCount = $result['rowCount'];
 
 // if ($rowCount == 0) {
 //     echo "No transactions have been made yet!";
@@ -80,44 +80,44 @@ $db->exec($SQL_create_buckets);
     // include("actions/buckets/sort_buckets.php");
 // }
 
-// $resultSet = $db->query("SELECT * FROM $tableName");
+$resultSet = $db->query("SELECT * FROM $tableName");
 
-// $col0 = $resultSet->columnName(0);
-// $col1 = $resultSet->columnName(1);
-// $col2 = $resultSet->columnName(2);
-// $col3 = $resultSet->columnName(3);
-// $col4 = $resultSet->columnName(4);
-// $col5 = $resultSet->columnName(5);
+$col0 = $resultSet->columnName(0);
+$col1 = $resultSet->columnName(1);
+$col2 = $resultSet->columnName(2);
+$col3 = $resultSet->columnName(3);
+$col4 = $resultSet->columnName(4);
+$col5 = $resultSet->columnName(5);
 
 
-// echo "<div class='table-responsive'>";
-// echo "<table class='table table-hover table-bordered'>\n";
-// echo "<thead class='thead-dark'>";
-// echo "<table width='100%' class='table table-striped'>\n";
-// echo "<tr><th style='width:5%;'>ID</th>".
-//      "<th style='width:10%;'>Date</th>".
-//      "<th style='width:45%;'>Vendor</th>".
-//      "<th>Spend</th>".
-//      "<th>Deposit</th>".
-//      "<th>Balance</th>".
-//      "<th>Actions</th></tr>\n";
-// echo "</thead><tbody>";
+echo "<div class='table-responsive'>";
+echo "<table class='table table-hover table-bordered'>\n";
+echo "<thead class='thead-dark'>";
+echo "<table width='100%' class='table table-striped'>\n";
+echo "<tr><th style='width:5%;'>ID</th>".
+     "<th style='width:10%;'>Date</th>".
+     "<th style='width:45%;'>Vendor</th>".
+     "<th>Spend</th>".
+     "<th>Deposit</th>".
+     "<th>Balance</th>".
+     "<th>Actions</th></tr>\n";
+echo "</thead><tbody>";
 
-// while ($row = $resultSet->fetchArray()) {
-//     echo "<tr><td>{$row[0]}</td>";
-//     echo "<td>{$row[1]}</td>";
-//     echo "<td>{$row[2]}</td>";
-//     echo "<td>{$row[3]}</td>";
-//     echo "<td>{$row[4]}</td>";
-//     echo "<td>{$row[5]}</td>";
-//     echo "<td>";
-//     echo "<a class='btn btn-small btn-primary' href='/actions/update/update.php?id={$row[0]}'>Update</a>";
-//     echo "&nbsp;";
-//     echo "<a class='btn btn-small btn-danger' href='/actions/delete/delete.php?id={$row[0]}'>Delete</a>";
-//     echo "</td></tr>\n";
-// }
-// echo "</tbody></table>\n";
-// echo "</div>";
+while ($row = $resultSet->fetchArray()) {
+    echo "<tr><td>{$row[0]}</td>";
+    echo "<td>{$row[1]}</td>";
+    echo "<td>{$row[2]}</td>";
+    echo "<td>{$row[3]}</td>";
+    echo "<td>{$row[4]}</td>";
+    echo "<td>{$row[5]}</td>";
+    echo "<td>";
+    echo "<a class='btn btn-small btn-primary' href='/actions/update/update.php?id={$row[0]}'>Update</a>";
+    echo "&nbsp;";
+    echo "<a class='btn btn-small btn-danger' href='/actions/delete/delete.php?id={$row[0]}'>Delete</a>";
+    echo "</td></tr>\n";
+}
+echo "</tbody></table>\n";
+echo "</div>";
 
 $db->close();
 

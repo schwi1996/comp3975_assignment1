@@ -1,18 +1,6 @@
 <?php include("setup/inc_header.php"); 
 
 require_once('connect_database.php');
-
-$SQL_create_users_table = "CREATE TABLE IF NOT EXISTS Users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    first_name VARCHAR(80) NOT NULL,
-    last_name VARCHAR(80) NOT NULL,
-    email VARCHAR(80) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    verified_status BOOLEAN DEFAULT 1,
-    role VARCHAR(20) DEFAULT 'user'
-);";
-
-$db -> exec($SQL_create_users_table);
 ?>
 
 

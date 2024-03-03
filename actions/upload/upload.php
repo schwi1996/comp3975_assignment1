@@ -1,24 +1,25 @@
 <?php 
 require_once('../../setup/config_session.inc.php');
+require_once('../../custom_error_handler.inc.php');
 require_once('../../utils.php');
 include("../../setup/inc_header.php"); ?>
 
 <h1>Welcome Back!</h1>
 
-<form id="uploadForm" enctype="multipart/form-data">
-        <label for="fileInput">Upload a CSV file to start organizing your finances!</label>
-        <input type="file" id="fileInput" accept=".csv" required>
-        <br><br>
-        
+<form action="process_upload.php" method="post" enctype="multipart/form-data">
+    <label for="fileInput">Upload a CSV file to start organizing your finances!</label>
+    <input type="file" name="csvFile" id="fileInput"/>
+    <input type="submit" value="Upload" name="submit"/>
+    <br><br>
 </form>
-<br><br>
-<div class="form-group">
+<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>
+<!-- <div class="form-group">
                 <a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>
                 &nbsp;&nbsp;&nbsp;
                 <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitForm()">Submit</button>
-</div>
+</div> -->
 
-<script>
+<!-- <script>
         function submitForm() {
             const fileInput = document.getElementById('fileInput');
             const file = fileInput.files[0];
@@ -41,6 +42,6 @@ include("../../setup/inc_header.php"); ?>
                 alert('Please choose a CSV file to upload.');
             }
         }
-    </script>
+    </script> -->
 
 <?php include("../../setup/inc_footer.php"); ?>

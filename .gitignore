@@ -1,0 +1,6 @@
+# SQLite Database (temporary)
+expense.sqlite
+
+# Environment variables
+/vendor/
+.env

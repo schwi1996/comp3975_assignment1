@@ -11,7 +11,14 @@ include("../../setup/inc_header.php"); ?>
 <button onclick="location.href='../create/create.php'" class="btn btn-success">Create New Transaction</button>
 </br>
 </br>
-
-<?php include("../../database_setup.php"); ?>
+<?php 
+    spl_autoload_register(function($className) {
+        require_once("../../classes/$className.php");
+    });
+    include("../../database_setup.php");
+    // $version = $db->querySingle('SELECT SQLITE_VERSION()');
+    // Transaction::printTransactions($db); 
+    Transaction::printTransactions(); 
+?>
 
 <?php include("../../setup/inc_footer.php"); ?>

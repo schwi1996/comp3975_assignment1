@@ -1,40 +1,27 @@
 <?php
     if (isset($_POST['create'])) {
         include("../../utils.php");
-        include("../../connect_database.php");
+        // include("../../connect_database.php");
 
-        $version = $db->querySingle('SELECT SQLITE_VERSION()');
-
+        spl_autoload_register(function($className) {
+            require_once("../../classes/$className.php");
+        });
         extract($_POST);
 
-        $tableName = 'Transactions';
+        // $version = $db->querySingle('SELECT SQLITE_VERSION()');
+
+        // extract($_POST);
 
         $Date = sanitize_input($Date);
         $Vendor = sanitize_input($Vendor);
         $Spend = sanitize_input($Spend);
         $Deposit = sanitize_input($Deposit);
         $Balance = sanitize_input($Balance);
-
-        $SQL_insert_data = $db->prepare("INSERT INTO $tableName (Date, Vendor, Spend, Deposit, Balance) VALUES (:Date, :Vendor, :Spend, :Deposit, :Balance)");
-        // Prepare and execute the INSERT query
         
-        // Bind parameters
-        $SQL_insert_data->bindValue(':Date', $Date, SQLITE3_TEXT);
-        $SQL_insert_data->bindValue(':Vendor', $Vendor, SQLITE3_TEXT);
-        $SQL_insert_data->bindValue(':Spend', $Spend, SQLITE3_TEXT);
-        $SQL_insert_data->bindValue(':Deposit', $Deposit, SQLITE3_TEXT);
-        $SQL_insert_data->bindValue(':Balance', $Balance, SQLITE3_TEXT);
-        
-        // Execute the query
-        $resultSet = $SQL_insert_data->execute();
+        $resultSet = Transaction::insertTransaction($Date, $Vendor, $Spend, $Deposit, $Balance);
+        $organizeResult = Transaction::updateBalance();
 
-        include("../buckets/sort_buckets.php");
-        
-        $db->close();
-    }
-
-    if ($resultSet !== false) {
-        header('Location: ../landing/landing.php');
-        exit;
+        header('Location: ' . $resultSet);
+        // include("../buckets/sort_buckets.php");
     }
 ?>

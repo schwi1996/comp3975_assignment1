@@ -2,7 +2,9 @@
 require_once("../../setup/inc_header.php");
 require_once('../../custom_error_handler.inc.php');
 require_once('../../connect_database.php');
-// include("../buckets/process_buckets.php");
+spl_autoload_register(function($className) {
+    require_once("../../classes/$className.php");
+});
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
@@ -21,8 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
         }
         fclose($handle);
     }
-    $db -> close();
+    $organizeResult = Transaction::updateBalance();
+    
+    Bucket::sortBucket(); 
+    
     header('Location: /actions/landing/landing.php');
+
+    $db -> close();
 } else {
     echo "Error: No file uploaded.";
 }

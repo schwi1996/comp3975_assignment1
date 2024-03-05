@@ -21,7 +21,7 @@ $SQL_create_users_table = "CREATE TABLE IF NOT EXISTS Users (
     last_name VARCHAR(80) NOT NULL,
     email VARCHAR(80) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    verified_status BOOLEAN DEFAULT 1,
+    verified_status BOOLEAN DEFAULT 0,
     role VARCHAR(20) DEFAULT 'user'
 );";
 

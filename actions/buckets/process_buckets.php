@@ -24,6 +24,4 @@ echo "</div>";
 
 $db->close();
 
-
-
 ?>

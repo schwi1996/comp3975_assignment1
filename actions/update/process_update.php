@@ -1,39 +1,27 @@
 <?php
     if (isset($_POST['update'])) {
         include("../../utils.php");
-        include("../../connect_database.php");
-
-        $version = $db->querySingle('SELECT SQLITE_VERSION()');
+        spl_autoload_register(function($className) {
+            require_once("../../classes/$className.php");
+        });
 
         extract($_POST);
 
-        $tableName = 'Transactions';
+        $id = $_POST['TransactionId'];
 
-        $TransactionId = sanitize_input($TransactionId);
         $Date = sanitize_input($Date);
         $Vendor = sanitize_input($Vendor);
         $Spend = sanitize_input($Spend);
         $Deposit = sanitize_input($Deposit);
         $Balance = sanitize_input($Balance);
 
-        // Prepare and execute the INSERT query
-        $SQL_update_data = $db->prepare("UPDATE $tableName SET Date = :Date, Vendor = :Vendor, Spend = :Spend, Deposit = :Deposit, Balance = :Balance WHERE TransactionId = :TransactionId");
-        
-        // Bind parameters
-        $SQL_update_data->bindValue(':TransactionId', $TransactionId, SQLITE3_TEXT);
-        $SQL_update_data->bindValue(':Date', $Date, SQLITE3_TEXT);
-        $SQL_update_data->bindValue(':Vendor', $Vendor, SQLITE3_TEXT);
-        $SQL_update_data->bindValue(':Spend', $Spend, SQLITE3_TEXT);
-        $SQL_update_data->bindValue(':Deposit', $Deposit, SQLITE3_TEXT);
-        $SQL_update_data->bindValue(':Balance', $Balance, SQLITE3_TEXT);
-        
-        // Execute the query
-        $resultSet = $SQL_update_data->execute();
-        
-        $db->close();
+        $resultSet1 = Transaction::updateTransaction($id, $Date, $Vendor, $Spend, $Deposit, $Balance);
+        $organizeResult = Transaction::updateBalance();
+        $resultSet2 = Bucket::deleteBucket($id);
+        $resultSet3 = Bucket::sortBucket($db ,$id, $Date, $Vendor);
     }
 
-    if ($resultSet !== false) {
+    if (($resultSet1 && $resultSet2 && $resultSet3) !== false) {
         header('Location: ../landing/landing.php');
         exit;
     }

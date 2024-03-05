@@ -1,0 +1,882 @@
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] include(../connect_database.php): Failed to open stream: No such file or directory
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 82
+Error: [2] include(): Failed opening '../connect_database.php' for inclusion (include_path='.;C:\php\pear')
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 82
+Error: [2] Undefined variable $db
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 84
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined array key "ADMIN_EMAIL"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 12
+Error: [2] Undefined array key "ADMIN_PASSWORD"
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [8192] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 13
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: NOT NULL constraint failed: Users.email
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 37
+Error: [2] Undefined variable $tableName
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 83
+Error: [2] SQLite3::query(): Unable to prepare statement: incomplete input
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 83
+Error: [2] Undefined variable $tableName
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 83
+Error: [2] SQLite3::query(): Unable to prepare statement: incomplete input
+C:\phpWork\work\comp3975_assignment1\database_setup.php: 83
+Error: [2] include(../connect_database.php): Failed to open stream: No such file or directory
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 82
+Error: [2] include(): Failed opening '../connect_database.php' for inclusion (include_path='.;C:\php\pear')
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 82
+Error: [2] Undefined variable $db
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 85
+Error: [2] include(../connect_database.php): Failed to open stream: No such file or directory
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 82
+Error: [2] include(): Failed opening '../connect_database.php' for inclusion (include_path='.;C:\php\pear')
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 82
+Error: [2] Undefined variable $db
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 85
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key 0
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "ID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 109
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 116
+Error: [2] Undefined array key "TransactionID"
+C:\phpWork\work\comp3975_assignment1\classes\Transaction.php: 118
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Undefined variable $checkId
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Trying to access array offset on null
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] SQLite3Stmt::execute(): Unable to execute statement: database is locked
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 77
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] Array to string conversion
+C:\phpWork\work\comp3975_assignment1\actions\buckets\sort_buckets.php: 14
+Error: [2] include(../../buckets/sort_buckets.php): Failed to open stream: No such file or directory
+C:\phpWork\work\comp3975_assignment1\actions\upload\process_upload.php: 28
+Error: [2] include(): Failed opening '../../buckets/sort_buckets.php' for inclusion (include_path='.;C:\php\pear')
+C:\phpWork\work\comp3975_assignment1\actions\upload\process_upload.php: 28
+Error: [2] Undefined variable $_id
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 65
+Error: [2] SQLite3::query(): Unable to prepare statement: incomplete input
+C:\phpWork\work\comp3975_assignment1\classes\Bucket.php: 65

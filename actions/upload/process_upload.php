@@ -8,6 +8,15 @@ require_once('../../connect_database.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['csvFile']) && $_FILES['csvFile']['error'] == 0) {
         $csv_file = $_FILES['csvFile']['tmp_name'];
+        
+        $imports_dir = __DIR__ . '/../../imports';
+        if (!is_dir($imports_dir)) {
+            if (!mkdir($imports_dir, 0777, true)) {
+                $_SESSION['error'] = "Error: Unable to create imports directory.";
+                header('Location: /actions/upload/upload.php');
+                die();
+            }
+        }
 
         if (($handle = fopen($csv_file, 'r')) !== false) {
             while (($row = fgetcsv($handle)) !== false) {
@@ -23,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             fclose($handle);
 
             $file_name = pathinfo($_FILES['csvFile']['name'], PATHINFO_FILENAME);
-            $path = '../../imports/' . $file_name . '.imported';
+            $path = $imports_dir .  '/' . $file_name . '.imported';
             if (!move_uploaded_file($csv_file, $path)) {
                 echo "Error: Unable to move file.";
             }

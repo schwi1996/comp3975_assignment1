@@ -20,6 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
             $stmt -> execute();
         }
         fclose($handle);
+
+        $file_name = pathinfo($_FILES['csvFile']['name'], PATHINFO_FILENAME);
+        $path = '../imports/' . $file_name . '.imported';
+        if (!move_uploaded_file($csv_file, $path)) {
+            echo "Error: Unable to move file.";
+        }
     }
     $db -> close();
     header('Location: /actions/landing/landing.php');

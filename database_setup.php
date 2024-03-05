@@ -54,6 +54,7 @@ $SQL_create_buckets = "CREATE TABLE IF NOT EXISTS Buckets (
     Date TEXT NOT NULL,
     Vendor TEXT NOT NULL,
     Category TEXT NOT NULL,
+    Spend REAL,
     FOREIGN KEY (id) REFERENCES Transactions(TransactionId)
 );";
 

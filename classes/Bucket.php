@@ -59,7 +59,12 @@
                 $id = $row['TransactionId'];
                 $date = $row['Date'];
                 $vendor = $row['Vendor'];
+                $spend = $row['Spend'];
                 
+                if ($spend == NULL || $spend == 0) {
+                    continue;  // Skip this iteration if the spend is 0
+                }
+
                 $version = $db->querySingle('SELECT SQLITE_VERSION()');
                 $tableName = 'Buckets';
                 $checkIdResult = $db->query("SELECT COUNT(*) AS 'count' FROM $tableName WHERE id = $id");
@@ -81,11 +86,12 @@
                 }
 
                 // Insert the data into the Buckets table
-                $SQL_insert_data = $db -> prepare("INSERT INTO $tableName (id, Date, Vendor, Category) VALUES (?, ?, ?, ?)");
+                $SQL_insert_data = $db -> prepare("INSERT INTO $tableName (id, Date, Vendor, Category, Spend) VALUES (?, ?, ?, ?, ?)");
                 $SQL_insert_data->bindValue(1, $id, SQLITE3_INTEGER);
                 $SQL_insert_data->bindValue(2, $date, SQLITE3_TEXT);
                 $SQL_insert_data->bindValue(3, $vendor, SQLITE3_TEXT);
                 $SQL_insert_data->bindValue(4, $category, SQLITE3_TEXT);
+                $SQL_insert_data->bindValue(5, $spend, SQLITE3_FLOAT);
                 $SQL_insert_data->execute();
 
             }
@@ -96,7 +102,7 @@
             
         }
 
-        public static function singleSortBucket($_id, $_date, $_vendor) {
+        public static function singleSortBucket($_id, $_date, $_vendor, $_spend) {
             include("../../connect_database.php");
 
             $version = $db->querySingle('SELECT SQLITE_VERSION()');
@@ -110,6 +116,10 @@
                 'Salary' => ['deposit', 'pay']
                 // Add more categories and keywords as needed
             ];
+
+            if ($_spend == NULL || $_spend == 0) {
+                return '../landing/landing.php';
+            }
                 
             $tableName = 'Buckets';
             
@@ -125,11 +135,12 @@
             }
 
             // Insert the data into the Buckets table
-            $SQL_insert_data = $db -> prepare("INSERT INTO $tableName (id, Date, Vendor, Category) VALUES (?, ?, ?, ?)");
+            $SQL_insert_data = $db -> prepare("INSERT INTO $tableName (id, Date, Vendor, Category, Spend) VALUES (?, ?, ?, ?, ?)");
             $SQL_insert_data->bindValue(1, $_id, SQLITE3_INTEGER);
             $SQL_insert_data->bindValue(2, $_date, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(3, $_vendor, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(4, $category, SQLITE3_TEXT);
+            $SQL_insert_data->bindValue(5, $_spend, SQLITE3_FLOAT);
             $SQL_insert_data->execute();
 
             $db->close();

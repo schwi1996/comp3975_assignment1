@@ -30,6 +30,14 @@ function is_email_taken(object $db, string $email) {
     }
 }
 
+function is_password_valid(string $password) {
+    if (strlen($password) < 8) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     require_once('../../setup/config_session.inc.php'); 
@@ -57,6 +65,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         if (is_email_taken($db, $email)) {
             $errors['email_taken'] = 'Email already registered!';
+        }
+
+        if (!is_password_valid($password)) {
+            $errors['invalid_password'] = 'Password must be at least 8 characters long!';
         }
 
         

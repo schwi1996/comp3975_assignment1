@@ -7,11 +7,12 @@ function registerUser(object $db, string $firstName, string $lastName, string $e
     try {
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-        $insertUser = $db -> prepare('INSERT INTO Users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');
+        $insertUser = $db -> prepare('INSERT INTO Users (first_name, last_name, email, password, verified_status) VALUES (:first_name, :last_name, :email, :password, :verified_status)');
         $insertUser -> bindValue(':first_name', $firstName, SQLITE3_TEXT);
         $insertUser -> bindValue(':last_name', $lastName, SQLITE3_TEXT);
         $insertUser -> bindValue(':email', $email, SQLITE3_TEXT);
         $insertUser -> bindValue(':password', $passwordHash, SQLITE3_TEXT);
+        $insertUser -> bindValue(':verified_status', 0, SQLITE3_INTEGER);
 
         if ($insertUser -> execute()) {
             return true;

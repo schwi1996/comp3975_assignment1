@@ -18,7 +18,7 @@
         $resultSet1 = Transaction::updateTransaction($id, $Date, $Vendor, $Spend, $Deposit, $Balance);
         $organizeResult = Transaction::updateBalance();
         $resultSet2 = Bucket::deleteBucket($id);
-        $resultSet3 = Bucket::sortBucket($db ,$id, $Date, $Vendor);
+        $resultSet3 = Bucket::singleSortBucket($id, $Date, $Vendor);
     }
 
     if (($resultSet1 && $resultSet2 && $resultSet3) !== false) {

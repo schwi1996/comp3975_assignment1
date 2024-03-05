@@ -70,10 +70,52 @@
                 }
 
                 // Determine the category based on the vendor
+                $category = 'Miscellaneous';  // Default category
+                foreach ($keywords as $cat => $words) {
+                    foreach ($words as $word) {
+                        if (stripos(strtolower($vendor), strtolower($word)) !== false) {
+                            $category = $cat;
+                            break 2;  // Break out of both loops
+                        }
+                    }
+                }
+
+                // Insert the data into the Buckets table
+                $SQL_insert_data = $db -> prepare("INSERT INTO $tableName (id, Date, Vendor, Category) VALUES (?, ?, ?, ?)");
+                $SQL_insert_data->bindValue(1, $id, SQLITE3_INTEGER);
+                $SQL_insert_data->bindValue(2, $date, SQLITE3_TEXT);
+                $SQL_insert_data->bindValue(3, $vendor, SQLITE3_TEXT);
+                $SQL_insert_data->bindValue(4, $category, SQLITE3_TEXT);
+                $SQL_insert_data->execute();
+
+            }
+
+            $db->close();
+            
+        }
+
+        public static function singleSortBucket($_id, $_date, $_vendor) {
+            include("../../connect_database.php");
+
+            $version = $db->querySingle('SELECT SQLITE_VERSION()');
+
+            $keywords = [
+                'Groceries' => ['walmart', 'safeway', 'supers', 'costco'],
+                'Entertainment' => ['restaurat', 'restaurant', 'restauran','subway', 'mcdonalds', 'tim hortons', '7-eleven'],
+                'Insurance' => ['icbc', 'msp'],
+                'Utilities' => ['gas', 'shaw', 'rogers'],
+                'Donations' => ['donation', 'charity', 'red cross'],
+                'Salary' => ['deposit', 'pay']
+                // Add more categories and keywords as needed
+            ];
+                
+            $tableName = 'Buckets';
+            
+            // Determine the category based on the vendor
             $category = 'Miscellaneous';  // Default category
             foreach ($keywords as $cat => $words) {
                 foreach ($words as $word) {
-                    if (stripos(strtolower($vendor), strtolower($word)) !== false) {
+                    if (stripos(strtolower($_vendor), strtolower($word)) !== false) {
                         $category = $cat;
                         break 2;  // Break out of both loops
                     }
@@ -82,16 +124,15 @@
 
             // Insert the data into the Buckets table
             $SQL_insert_data = $db -> prepare("INSERT INTO $tableName (id, Date, Vendor, Category) VALUES (?, ?, ?, ?)");
-            $SQL_insert_data->bindValue(1, $id, SQLITE3_INTEGER);
-            $SQL_insert_data->bindValue(2, $date, SQLITE3_TEXT);
-            $SQL_insert_data->bindValue(3, $vendor, SQLITE3_TEXT);
+            $SQL_insert_data->bindValue(1, $_id, SQLITE3_INTEGER);
+            $SQL_insert_data->bindValue(2, $_date, SQLITE3_TEXT);
+            $SQL_insert_data->bindValue(3, $_vendor, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(4, $category, SQLITE3_TEXT);
             $SQL_insert_data->execute();
 
-            }
-
             $db->close();
-            
+
+            return '../landing/landing.php';
         }
     }
 

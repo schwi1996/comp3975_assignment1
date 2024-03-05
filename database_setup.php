@@ -40,7 +40,7 @@ if ($result == 0) {
 // Create Transactions table if it does not exist
 $SQL_create_table = "CREATE TABLE IF NOT EXISTS Transactions (
     TransactionId INTEGER PRIMARY KEY AUTOINCREMENT,
-    Date TEXT NOT NULL,
+    Date Date NOT NULL,
     Vendor TEXT NOT NULL,
     Spend REAL,
     Deposit REAL,

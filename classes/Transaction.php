@@ -17,22 +17,35 @@
 
             $tableName = 'Transactions';
 
+            $dateCheck = DateTime::createFromFormat('Y-m-d', $_date);
+            if ($dateCheck === false) {
+                return 'create.php?error=Date format incorrect. Please use YYYY-MM-DD format.';
+            }
+        
+            $errors = $dateCheck::getLastErrors();
+            if ($errors['warning_count'] > 0 || $errors['error_count'] > 0) {
+                return 'create.php?error=Date format incorrect. Please use YYYY-MM-DD format.';
+            }
+
+            $formattedDate = $dateCheck->format('Y-m-d');
             $SQL_insert_data = $db->prepare("INSERT INTO $tableName (Date, Vendor, Spend, Deposit, Balance) VALUES (:Date, :Vendor, :Spend, :Deposit, :Balance)");
             // Prepare and execute the INSERT query
             
             // Bind parameters
-            $SQL_insert_data->bindValue(':Date', $_date, SQLITE3_TEXT);
+            $SQL_insert_data->bindValue(':Date', $formattedDate, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Vendor', $_vendor, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Spend', $_spend, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Deposit', $_deposit, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Balance', $_balance, SQLITE3_TEXT);
             
             // Execute the query
-            $resultSet = $SQL_insert_data->execute();
+            $SQL_insert_data->execute();
+
+            $id = $db->lastInsertRowID();
             
             $db->close();
 
-            return '../landing/landing.php';
+            return $id;
             
         }
 

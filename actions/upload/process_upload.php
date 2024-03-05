@@ -6,14 +6,17 @@ spl_autoload_register(function($className) {
     require_once("../../classes/$className.php");
 });
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
     $csv_file = $_FILES['csvFile']['tmp_name'];
 
     if (($handle = fopen($csv_file, 'r')) !== false) {
         while (($row = fgetcsv($handle)) !== false) {
+
+            // Convert date from MM/DD/YYYY to YYYY-MM-DD
+            $date = DateTime::createFromFormat('m/d/Y', $row[0])->format('Y-m-d');
+
             $stmt = $db -> prepare('INSERT INTO Transactions (Date, Vendor, Spend, Deposit, Balance) VALUES (:date, :vendor, :spend, :deposit, :balance)');
-            $stmt -> bindValue(':date', $row[0]);
+            $stmt -> bindValue(':date', $date);
             $stmt -> bindValue(':vendor', $row[1]);
             $stmt -> bindValue(':spend', $row[2]);
             $stmt -> bindValue(':deposit', $row[3]);
@@ -35,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
     }
     $organizeResult = Transaction::updateBalance();
     
-    Bucket::sortBucket(); 
+    $resultSet = Bucket::sortBucket(); 
     
-    header('Location: /actions/landing/landing.php');
+    header('Location: ' . $resultSet);
 
     $db -> close();
 } else {

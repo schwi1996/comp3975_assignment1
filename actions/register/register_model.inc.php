@@ -1,26 +1,10 @@
 <?php 
-
 declare(strict_types=1);
 define('BYPASS_AUTH', true);
-
-// function createUsersTableIfNotExists(object $db) { // TODO: move this elsewhere, to database setup
-
-//     $db -> exec('CREATE TABLE IF NOT EXISTS Users (
-//         id INTEGER PRIMARY KEY AUTOINCREMENT,
-//         first_name VARCHAR(80) NOT NULL,
-//         last_name VARCHAR(80) NOT NULL,
-//         email VARCHAR(80) NOT NULL UNIQUE,
-//         password VARCHAR(255) NOT NULL,
-//         verified_status BOOLEAN DEFAULT 0,
-//         role VARCHAR(20) DEFAULT "user"
-//     )');
-// }
 
 function registerUser(object $db, string $firstName, string $lastName, string $email, string $password) {
 
     try {
-        // createUsersTableIfNotExists($db); // TODO: move this elsewhere, don't call each time a user registers
-
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
         $insertUser = $db -> prepare('INSERT INTO Users (first_name, last_name, email, password) VALUES (:first_name, :last_name, :email, :password)');

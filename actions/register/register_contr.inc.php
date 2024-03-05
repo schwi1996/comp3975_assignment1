@@ -35,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     require_once('../../setup/config_session.inc.php'); 
     require_once('../../connect_database.php');
     require_once('register_model.inc.php'); 
-    // require_once('register_view.inc.php'); 
     require_once('../../utils.php');
 
 

@@ -61,7 +61,6 @@ function saveChanges() {
         dataToSend.push({userId: userId, verifiedStatus: verifiedStatus});
     });
 
-    // Send the data to the server using AJAX
     $.ajax({
         url: 'admin_contr.inc.php', 
         type: 'POST',

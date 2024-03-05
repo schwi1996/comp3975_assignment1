@@ -47,13 +47,3 @@ function get_user_details($db, $email) {
     $row = $result -> fetchArray();
     return $row;
 }
-
-// function get_user_id($db, $email) {
-//     $userIdQuery = $db -> prepare('SELECT id FROM Users WHERE email = :email');
-//     $userIdQuery -> bindValue(':email', $email, SQLITE3_TEXT);
-//     $result = $userIdQuery -> execute();
-
-//     $row = $result -> fetchArray(SQLITE3_ASSOC);
-
-//     return $row['id'];
-// }

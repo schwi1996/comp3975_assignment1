@@ -53,19 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['first_name'] = $user_details['first_name'];
         $_SESSION['last_name'] = $user_details['last_name'];
         $_SESSION['role'] = $user_details['role'];
-        // $id = get_user_id($db, $email);
-        // // store the user's ID in a session variable to check if the user is logged in on other pages
-        // $_SESSION['id'] = $id;
-        // $_SESSION['first_name'] = get_user_first_name($db, $id);
         
         header('Location: ../landing/landing.php');
         exit();
-        // $id = get_user_id($db, $email);
-        // // store the user's ID in a session variable to check if the user is logged in on other pages
-        // $_SESSION['id'] = $id;
-        
-        // header('Location: ../landing/landing.php');
-        // exit();
     } catch (Exception $e) {
         error_log($e -> getMessage());
         header('Location: login.php');

@@ -16,18 +16,22 @@ $version = $db->querySingle('SELECT SQLITE_VERSION()');
 $resultSet = $db->query('SELECT * FROM Transactions');
 
 if ($resultSet->fetchArray() === false) {
-    // No transactions
-    echo "<p>No transactions made yet.</p>";
     echo '<div class="form-group">';
     echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
     echo '</div>';
+    
+    // No transactions
+    echo "<p>No transactions have been made yet.</p>";
+    
 } else {
+    echo '<div class="form-group">';
+    echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
+    echo '</div>';
+    
     // Transactions exist
     include("process_buckets.php");
 
-    echo '<div class="form-group">';
-    echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
-    echo '</div>';
+    
 }
 
 $db->close();

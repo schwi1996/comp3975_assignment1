@@ -34,9 +34,9 @@
             // Bind parameters
             $SQL_insert_data->bindValue(':Date', $formattedDate, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Vendor', $_vendor, SQLITE3_TEXT);
-            $SQL_insert_data->bindValue(':Spend', $_spend, SQLITE3_TEXT);
-            $SQL_insert_data->bindValue(':Deposit', $_deposit, SQLITE3_TEXT);
-            $SQL_insert_data->bindValue(':Balance', $_balance, SQLITE3_TEXT);
+            $SQL_insert_data->bindValue(':Spend', $_spend, SQLITE3_FLOAT);
+            $SQL_insert_data->bindValue(':Deposit', $_deposit, SQLITE3_FLOAT);
+            $SQL_insert_data->bindValue(':Balance', $_balance, SQLITE3_FLOAT);
             
             // Execute the query
             $SQL_insert_data->execute();
@@ -148,21 +148,8 @@
             $rowCount = $result['rowCount'];
 
             if ($rowCount == 0) {
-                // $SQL_insert_data = "INSERT INTO Transactions (Date, Vendor, Spend, Deposit, Balance) VALUES
-                // ('2021-01-01', 'Walmart', 100.00, 0.00, 500.00),
-                // ('2021-01-02', 'Target', 50.00, 0.00, 450.00),
-                // ('2021-01-03', 'Salary', 0.00, 200.00, 650.00),
-                // ('2022-01-04', 'Best Buy', 150.00, 0.00, 500.00),
-                // ('2019-01-05', 'Bonus', 0.00, 100.00, 600.00),
-                // ('2023-01-06', 'Amazon', 200.00, 0.00, 400.00),
-                // ('2024-01-07', 'Salary', 0.00, 300.00, 700.00),
-                // ('2021-01-29', 'Walmart', 100.00, 0.00, 600.00),
-                // ('2009-01-16', 'Amazon', 300.00, 0.00, 300.00),
-                // ('2011-01-10', 'Salary', 0.00, 400.00, 700.00)
-                // ";
-                // $db->exec($SQL_insert_data);
-                echo "<h3>No transactions have been made yet!</h3>";
-                exit;
+                echo "<p>No transactions have been made yet!</p>";
+                return;
             }
 
             $resultSet = $db->query("SELECT * FROM $tableName ORDER BY Date ASC");
@@ -234,9 +221,9 @@
             $SQL_update_data->bindValue(':TransactionId', $_id, SQLITE3_INTEGER);
             $SQL_update_data->bindValue(':Date', $_date, SQLITE3_TEXT);
             $SQL_update_data->bindValue(':Vendor', $_vendor, SQLITE3_TEXT);
-            $SQL_update_data->bindValue(':Spend', $_spend, SQLITE3_TEXT);
-            $SQL_update_data->bindValue(':Deposit', $_deposit, SQLITE3_TEXT);
-            $SQL_update_data->bindValue(':Balance', $_balance, SQLITE3_TEXT);
+            $SQL_update_data->bindValue(':Spend', $_spend, SQLITE3_FLOAT);
+            $SQL_update_data->bindValue(':Deposit', $_deposit, SQLITE3_FLOAT);
+            $SQL_update_data->bindValue(':Balance', $_balance, SQLITE3_FLOAT);
             
             // Execute the query
             $resultSet = $SQL_update_data->execute();

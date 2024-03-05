@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../../setup/inc_header.php");
 require_once('../../custom_error_handler.inc.php');
 require_once('../../connect_database.php');
@@ -6,12 +7,29 @@ spl_autoload_register(function($className) {
     require_once("../../classes/$className.php");
 });
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
-    $csv_file = $_FILES['csvFile']['tmp_name'];
+function check_file_type($file) {
+    $file_type = pathinfo($file['name'], PATHINFO_EXTENSION);
+    if ($file_type !== 'csv') {
+        $_SESSION['error'] = "Only CSV files can be uploaded.";
+        header('Location: /actions/upload/upload.php');
+        die();
+    }
+}
 
-    if (($handle = fopen($csv_file, 'r')) !== false) {
+function create_imports_dir($dir) {
+    if (!is_dir($dir)) {
+        if (!mkdir($dir, 0777, true)) {
+            $_SESSION['error'] = "Error: Unable to create imports directory.";
+            header('Location: /actions/upload/upload.php');
+            die();
+        }
+    }
+}
+
+function process_CSV_file($file, $db, $dir) {
+    if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
         while (($row = fgetcsv($handle)) !== false) {
-
+            
             // Convert date from MM/DD/YYYY to YYYY-MM-DD
             $date = DateTime::createFromFormat('m/d/Y', $row[0])->format('Y-m-d');
 
@@ -26,26 +44,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
         }
         fclose($handle);
 
-        $file_name = pathinfo($_FILES['csvFile']['name'], PATHINFO_FILENAME);
-
-        $file_extension = pathinfo($_FILES['csvFile']['name'], PATHINFO_EXTENSION);
-
-        $path = '../../imports/' . $file_name . '.' . $file_extension . '.imported';
-
-        if (!move_uploaded_file($csv_file, $path)) {
+        $file_name = pathinfo($file['name'], PATHINFO_FILENAME);
+        $path = $dir .  '/' . $file_name . '.imported';
+        if (!move_uploaded_file($file['tmp_name'], $path)) {
             echo "Error: Unable to move file.";
         }
     }
-    $organizeResult = Transaction::updateBalance();
-    
-    $resultSet = Bucket::sortBucket(); 
-    
-    header('Location: ' . $resultSet);
-
-    $db -> close();
-} else {
-    echo "Error: No file uploaded.";
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_FILES['csvFile']) && $_FILES['csvFile']['error'] == 0) {
+        check_file_type($_FILES['csvFile']);
 
+        $imports_dir = __DIR__ . '/../../imports';
+        create_imports_dir($imports_dir);
+
+        process_CSV_file($_FILES['csvFile'], $db, $imports_dir);
+        $organizeResult = Transaction::updateBalance();
+        $resultSet = Bucket::sortBucket();
+        header('Location: ' . $resultSet);
+      
+        $db -> close();
+    } else {
+        $_SESSION['error'] = "Please select a file to upload.";
+        header('Location: /actions/upload/upload.php');
+        die();
+    }
+} else {
+    echo "Error: Invalid request.";
+}
 ?>

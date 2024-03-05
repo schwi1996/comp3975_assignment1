@@ -7,41 +7,24 @@ include("../../setup/inc_header.php"); ?>
 <h1>Welcome Back!</h1>
 
 <form action="process_upload.php" method="post" enctype="multipart/form-data">
-    <label for="fileInput">Upload a CSV file to start organizing your finances!</label>
-    <input type="file" name="csvFile" id="fileInput"/>
-    <input type="submit" value="Upload" name="submit"/>
+    <label for="fileInput" style="display: block; margin-bottom: 10px;">Upload a CSV file to start organizing your finances!</label>
+    <input type="file" name="csvFile" id="fileInput" style="margin-bottom: 10px;"/>
+    
+    <div style="display: flex; align-items: center;">
+        <input type="submit" value="Upload" name="submit" style="background-color: #4CAF50; color: white; padding: 7px 14px; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px;"/>
+        <a href="../landing/landing.php" class="btn btn-primary">Back</a>
+    </div>
+
     <br><br>
 </form>
-<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>
-<!-- <div class="form-group">
-                <a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>
-                &nbsp;&nbsp;&nbsp;
-                <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitForm()">Submit</button>
-</div> -->
 
-<!-- <script>
-        function submitForm() {
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
+<?php 
+    if (isset($_SESSION['error'])) {
+        echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
+        unset($_SESSION['error']);
+    } 
+?>
 
-            if (file) {
-                const formData = new FormData();
-                formData.append('csvFile', file);
 
-                // You can now send this formData to your server using AJAX or other methods
-
-                // You can also access the content of the file using FileReader and parse it as needed
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const csvContent = e.target.result;
-                    console.log('CSV Content:', csvContent);
-                    // You can parse and process the CSV content here
-                };
-                reader.readAsText(file);
-            } else {
-                alert('Please choose a CSV file to upload.');
-            }
-        }
-    </script> -->
 
 <?php include("../../setup/inc_footer.php"); ?>

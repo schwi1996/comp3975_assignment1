@@ -39,12 +39,21 @@ function is_credentials_correct(object $db, string $email, string $inputPassword
     }
 }
 
-function get_user_id($db, $email) {
-    $userIdQuery = $db -> prepare('SELECT id FROM Users WHERE email = :email');
-    $userIdQuery -> bindValue(':email', $email, SQLITE3_TEXT);
-    $result = $userIdQuery -> execute();
+function get_user_details($db, $email) {
+    $user_details_query = $db -> prepare('SELECT id, first_name, last_name, role FROM Users WHERE email = :email');
+    $user_details_query -> bindValue(':email', $email);
+    $result = $user_details_query -> execute();
 
-    $row = $result -> fetchArray(SQLITE3_ASSOC);
-
-    return $row['id'];
+    $row = $result -> fetchArray();
+    return $row;
 }
+
+// function get_user_id($db, $email) {
+//     $userIdQuery = $db -> prepare('SELECT id FROM Users WHERE email = :email');
+//     $userIdQuery -> bindValue(':email', $email, SQLITE3_TEXT);
+//     $result = $userIdQuery -> execute();
+
+//     $row = $result -> fetchArray(SQLITE3_ASSOC);
+
+//     return $row['id'];
+// }

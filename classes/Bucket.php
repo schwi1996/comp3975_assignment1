@@ -91,6 +91,8 @@
             }
 
             $db->close();
+
+            return '../landing/landing.php';
             
         }
 

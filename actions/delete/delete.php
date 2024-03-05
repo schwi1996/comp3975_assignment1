@@ -8,74 +8,53 @@ include("../../setup/inc_header.php"); ?>
 <?php
     if (isset($_GET['id'])) {
     
-        include("../../connect_database.php");
-
-        $version = $db->querySingle('SELECT SQLITE_VERSION()');
+        spl_autoload_register(function($className) {
+            require_once("../../classes/$className.php");
+        });
 
         $id = $_GET['id'];
-        $tableName = 'Transactions';
-
-        // Check if ID exists
-        $checkDuplicateQuery = "SELECT COUNT(*) AS 'rowCount' FROM $tableName WHERE TransactionId = ?";
-        $checkStmt = $db->prepare($checkDuplicateQuery);
-        $checkStmt->bindParam(1, $id, SQLITE3_TEXT);
-        $result = $checkStmt->execute();
-        $rowCount = $result->fetchArray(SQLITE3_NUM);
-        $rowCount = $rowCount[0];
-
-
-        if ($rowCount == 0) {
-            // The specified ID doesn't exist in the database
-            echo "<p class='alert alert-danger'>Transaction with ID $id does not exist.</p>";
-            echo "<a href='../landing/landing.php' class='btn btn-small btn-primary'>&lt;&lt; BACK</a>";
-            exit;
-        }
-
-        // Fetch student details
-        $fetchQuery = "SELECT * FROM $tableName WHERE TransactionId = ?";
-        $fetchStmt = $db->prepare($fetchQuery);
-        $fetchStmt->bindParam(1, $id, SQLITE3_TEXT);
-        $result = $fetchStmt->execute();
-        $row = $result->fetchArray(SQLITE3_ASSOC);
-
-        // Assign values to variables
-        $TransactionId = $row['TransactionId'];
-        $Date = $row['Date'];
-        $Vendor = $row['Vendor'];
-        $Spend = $row['Spend'];
-        $Deposit = $row['Deposit'];
-        $Balance = $row['Balance'];
+        $resultSet = Transaction::displayTransaction($id);
+        $TransactionId = $resultSet['TransactionId'];
+        $Date = $resultSet['Date'];
+        $Vendor = $resultSet['Vendor'];
+        $Spend = $resultSet['Spend'];
+        $Deposit = $resultSet['Deposit'];
+        $Balance = $resultSet['Balance'];
+        
     };
-
-    $db->close();
 ?>
 
-<table>
-    <tr>
-        <td>ID: </td>
-        <td><?php echo $TransactionId ?></td>
-    </tr>
-    <tr>
-        <td>Date: </td>
-        <td><?php echo $Date ?></td>
-    </tr>
-    <tr>
-        <td>Vendor: </td>
-        <td><?php echo $Vendor ?></td>
-    </tr>
-    <tr>
-        <td>Spend: </td>
-        <td><?php echo $Spend ?></td>
-    </tr>
-    <tr>
-        <td>Deposit: </td>
-        <td><?php echo $Deposit ?></td>
-    </tr>
-    <tr>
-        <td>Balance: </td>
-        <td><?php echo $Balance ?></td>
-    </tr>
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <td style="width:25%;"><strong>ID:</strong></td>
+                <td><?php echo $TransactionId ?></td>
+            </tr>
+            <tr>
+                <td style="width:25%;"><strong>Date:</strong></td>
+                <td><?php echo $Date ?></td>
+            </tr>
+            <tr>
+                <td style="width:25%;"><strong>Vendor:</strong></td>
+                <td><?php echo $Vendor ?></td>
+            </tr>
+            <tr>
+                <td style="width:25%;"><strong>Spend:</strong></td>
+                <td><?php echo $Spend ?></td>
+            </tr>
+            <tr>
+                <td style="width:25%;"><strong>Deposit:</strong></td>
+                <td><?php echo $Deposit ?></td>
+            </tr>
+            <tr>
+                <td style="width:25%;"><strong>Balance:</strong></td>
+                <td><?php echo $Balance ?></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 <br />
 <form action="process_delete.php" method="post">
     <input type="hidden" value="<?php echo $TransactionId ?>" name="TransactionId" />

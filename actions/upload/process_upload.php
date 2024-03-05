@@ -3,7 +3,9 @@ session_start();
 require_once("../../setup/inc_header.php");
 require_once('../../custom_error_handler.inc.php');
 require_once('../../connect_database.php');
-// include("../buckets/process_buckets.php");
+spl_autoload_register(function($className) {
+    require_once("../../classes/$className.php");
+});
 
 function check_file_type($file) {
     $file_type = pathinfo($file['name'], PATHINFO_EXTENSION);
@@ -27,8 +29,12 @@ function create_imports_dir($dir) {
 function process_CSV_file($file, $db, $dir) {
     if (($handle = fopen($file['tmp_name'], 'r')) !== false) {
         while (($row = fgetcsv($handle)) !== false) {
+            
+            // Convert date from MM/DD/YYYY to YYYY-MM-DD
+            $date = DateTime::createFromFormat('m/d/Y', $row[0])->format('Y-m-d');
+
             $stmt = $db -> prepare('INSERT INTO Transactions (Date, Vendor, Spend, Deposit, Balance) VALUES (:date, :vendor, :spend, :deposit, :balance)');
-            $stmt -> bindValue(':date', $row[0]);
+            $stmt -> bindValue(':date', $date);
             $stmt -> bindValue(':vendor', $row[1]);
             $stmt -> bindValue(':spend', $row[2]);
             $stmt -> bindValue(':deposit', $row[3]);
@@ -54,10 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         create_imports_dir($imports_dir);
 
         process_CSV_file($_FILES['csvFile'], $db, $imports_dir);
-
+        $organizeResult = Transaction::updateBalance();
+        $resultSet = Bucket::sortBucket();
+        header('Location: ' . $resultSet);
+      
         $db -> close();
-        header('Location: /actions/landing/landing.php');
-        die();
     } else {
         $_SESSION['error'] = "Please select a file to upload.";
         header('Location: /actions/upload/upload.php');

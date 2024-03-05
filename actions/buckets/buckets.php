@@ -7,7 +7,9 @@ include("../../setup/inc_header.php"); ?>
 <h1>View Buckets</h1>
 
 <?php
+
 include("../../connect_database.php");
+
 
 $version = $db->querySingle('SELECT SQLITE_VERSION()');
 // Fetch all transactions

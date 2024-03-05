@@ -24,7 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['csvFile'])) {
         fclose($handle);
 
         $file_name = pathinfo($_FILES['csvFile']['name'], PATHINFO_FILENAME);
-        $path = '../../imports/' . $file_name . '.imported';
+
+        $file_extension = pathinfo($_FILES['csvFile']['name'], PATHINFO_EXTENSION);
+
+        $path = '../../imports/' . $file_name . '.' . $file_extension . '.imported';
+
         if (!move_uploaded_file($csv_file, $path)) {
             echo "Error: Unable to move file.";
         }

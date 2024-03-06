@@ -14,8 +14,8 @@ echo "<tr><th>Vendor</th>".
 echo "</thead><tbody>";
 
 while ($row = $resultSet->fetchArray()) {
-    echo "<tr><td>{$row[2]}</td>";
-    echo "<td>{$row[3]}</td>";
+    echo "<tr><td>{$row[1]}</td>";
+    echo "<td>{$row[2]}</td>";
     echo "<td>";
     echo "</td></tr>\n";
 }

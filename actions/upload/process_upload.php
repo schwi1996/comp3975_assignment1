@@ -32,13 +32,20 @@ function process_CSV_file($file, $db, $dir) {
             
             // Convert date from MM/DD/YYYY to YYYY-MM-DD
             $date = DateTime::createFromFormat('m/d/Y', $row[0])->format('Y-m-d');
-
-            $stmt = $db -> prepare('INSERT INTO Transactions (Date, Vendor, Spend, Deposit, Balance) VALUES (:date, :vendor, :spend, :deposit, :balance)');
+            $category = Bucket::singleSortBucket($row[1]);
+            if ($row[2] == '') {
+                $row[2] = 0;
+            }
+            if ($row[3] == '') {
+                $row[3] = 0;
+            }
+            $stmt = $db -> prepare('INSERT INTO Transactions (Date, Vendor, Spend, Deposit, Balance, Category) VALUES (:date, :vendor, :spend, :deposit, :balance, :category)');
             $stmt -> bindValue(':date', $date);
             $stmt -> bindValue(':vendor', $row[1]);
             $stmt -> bindValue(':spend', $row[2]);
             $stmt -> bindValue(':deposit', $row[3]);
             $stmt -> bindValue(':balance', $row[4]);
+            $stmt -> bindValue(':category', $category);
 
             $stmt -> execute();
         }
@@ -61,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         process_CSV_file($_FILES['csvFile'], $db, $imports_dir);
         $organizeResult = Transaction::updateBalance();
-        $resultSet = Bucket::sortBucket();
-        header('Location: ' . $resultSet);
+        
+        header('Location: /actions/landing/landing.php');
       
         $db -> close();
     } else {

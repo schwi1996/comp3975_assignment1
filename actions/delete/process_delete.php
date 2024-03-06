@@ -7,13 +7,8 @@
 
         extract($_POST);
         $id = $_POST['TransactionId'];
-        $resultSet1 = Transaction::deleteTransaction($id);
+        $resultSet = Transaction::deleteTransaction($id);
         $organizeResult = Transaction::updateBalance();
-        $resultSet2 = Bucket::deleteBucket($id);
-    }
-
-    if (($resultSet1 && $resultSet2) !== false) {
-        header('Location: ../landing/landing.php');
-        exit;
+        header('Location: ' . $resultSet);
     }
 ?>

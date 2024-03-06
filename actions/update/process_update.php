@@ -15,14 +15,10 @@
         $Deposit = sanitize_input($Deposit);
         $Balance = sanitize_input($Balance);
 
-        $resultSet1 = Transaction::updateTransaction($id, $Date, $Vendor, $Spend, $Deposit, $Balance);
+        $resultSet = Transaction::updateTransaction($id, $Date, $Vendor, $Spend, $Deposit, $Balance);
         $organizeResult = Transaction::updateBalance();
-        $resultSet2 = Bucket::deleteBucket($id);
-        $resultSet3 = Bucket::singleSortBucket($id, $Date, $Vendor, $Spend);
+        header('Location: ' . $resultSet);
     }
 
-    if (($resultSet1 && $resultSet2 && $resultSet3) !== false) {
-        header('Location: ../landing/landing.php');
-        exit;
-    }
+    
 ?>

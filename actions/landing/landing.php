@@ -30,8 +30,6 @@ if ($_SESSION['role'] == 'admin') {
         require_once("../../classes/$className.php");
     });
     include("../../database_setup.php");
-    // $version = $db->querySingle('SELECT SQLITE_VERSION()');
-    // Transaction::printTransactions($db); 
     Transaction::printTransactions(); 
 ?>
 

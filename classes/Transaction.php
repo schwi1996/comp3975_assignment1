@@ -28,24 +28,25 @@
             }
 
             $formattedDate = $dateCheck->format('Y-m-d');
-            $SQL_insert_data = $db->prepare("INSERT INTO $tableName (Date, Vendor, Spend, Deposit, Balance) VALUES (:Date, :Vendor, :Spend, :Deposit, :Balance)");
-            // Prepare and execute the INSERT query
-            
+            $category = Bucket::singleSortBucket($_vendor);
+            $SQL_insert_data = $db->prepare("INSERT INTO $tableName (Date, Vendor, Spend, Deposit, Balance, Category) VALUES (:Date, :Vendor, :Spend, :Deposit, :Balance, :Category)");
+        
             // Bind parameters
             $SQL_insert_data->bindValue(':Date', $formattedDate, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Vendor', $_vendor, SQLITE3_TEXT);
             $SQL_insert_data->bindValue(':Spend', $_spend, SQLITE3_FLOAT);
             $SQL_insert_data->bindValue(':Deposit', $_deposit, SQLITE3_FLOAT);
             $SQL_insert_data->bindValue(':Balance', $_balance, SQLITE3_FLOAT);
+            $SQL_insert_data->bindValue(':Category', $category, SQLITE3_TEXT);
             
             // Execute the query
             $SQL_insert_data->execute();
 
-            $id = $db->lastInsertRowID();
+            // $id = $db->lastInsertRowID();
             
             $db->close();
 
-            return $id;
+            return '../landing/landing.php';
             
         }
 
@@ -137,6 +138,19 @@
             $db->close();
         }
 
+        public static function updateCategory($id, $category) {
+            // update the category of the transaction id
+            include("../../connect_database.php");
+            $tableName = 'Transactions';
+
+            $SQL_update_data = $db->prepare("UPDATE $tableName SET Category = :Category WHERE TransactionId = :TransactionId");
+            $SQL_update_data->bindValue(':TransactionId', $id, SQLITE3_INTEGER);
+            $SQL_update_data->bindValue(':Category', $category, SQLITE3_TEXT);
+            $resultSet = $SQL_update_data->execute();
+            $db->close();
+            return $resultSet;
+        }
+
         public static function printTransactions() {
             include("../../connect_database.php");
             $version = $db->querySingle('SELECT SQLITE_VERSION()');
@@ -160,10 +174,11 @@
             // echo "<table width='100%' class='table table-striped'>\n";
             echo "<tr><th style='width:5%;'>ID</th>".
                 "<th style='width:10%;'>Date</th>".
-                "<th style='width:45%;'>Vendor</th>".
+                "<th style='width:35%;'>Vendor</th>".
                 "<th>Spend</th>".
                 "<th>Deposit</th>".
                 "<th>Balance</th>".
+                "<th>Category</th>".
                 "<th>Actions</th></tr>\n";
             echo "</thead><tbody>";
 
@@ -174,6 +189,7 @@
                 echo "<td>{$row['Spend']}</td>";
                 echo "<td>{$row['Deposit']}</td>";
                 echo "<td>{$row['Balance']}</td>";
+                echo "<td>{$row['Category']}</td>";
                 echo "<td>";
                 echo "<a class='btn btn-small btn-primary' href='/actions/update/update.php?id={$row['TransactionId']}'>Update</a>";
                 echo "&nbsp;";
@@ -199,11 +215,11 @@
             $SQL_delete_data->bindValue(':TransactionId', $_id, SQLITE3_INTEGER);
         
             // Execute the query
-            $resultSet = $SQL_delete_data->execute();
+            $SQL_delete_data->execute();
 
             $db->close();
 
-            return $resultSet;
+            return '../landing/landing.php';;
         }
 
         public static function updateTransaction($_id, $_date, $_vendor, $_spend, $_deposit, $_balance) {
@@ -213,24 +229,38 @@
 
             $tableName = 'Transactions';
 
+            $dateCheck = DateTime::createFromFormat('Y-m-d', $_date);
+            if ($dateCheck === false) {
+                return 'update.php?id=' . $_id . '&error=Date format incorrect. Please use YYYY-MM-DD format.';
+            }
+        
+            $errors = $dateCheck::getLastErrors();
+            if ($errors['warning_count'] > 0 || $errors['error_count'] > 0) {
+                return 'update.php?id=' . $_id . '&error=Date format incorrect. Please use YYYY-MM-DD format.';
+            }
+
+            $formattedDate = $dateCheck->format('Y-m-d');
+            $category = Bucket::singleSortBucket($_vendor);
+
             // Prepare and execute the INSERT query
-            $SQL_update_data = $db->prepare("UPDATE $tableName SET Date = :Date, Vendor = :Vendor, Spend = :Spend, Deposit = :Deposit, Balance = :Balance WHERE TransactionId = :TransactionId");
+            $SQL_update_data = $db->prepare("UPDATE $tableName SET Date = :Date, Vendor = :Vendor, Spend = :Spend, Deposit = :Deposit, Balance = :Balance, Category = :Category WHERE TransactionId = :TransactionId");
 
 
             // Bind parameters
             $SQL_update_data->bindValue(':TransactionId', $_id, SQLITE3_INTEGER);
-            $SQL_update_data->bindValue(':Date', $_date, SQLITE3_TEXT);
+            $SQL_update_data->bindValue(':Date', $formattedDate, SQLITE3_TEXT);
             $SQL_update_data->bindValue(':Vendor', $_vendor, SQLITE3_TEXT);
             $SQL_update_data->bindValue(':Spend', $_spend, SQLITE3_FLOAT);
             $SQL_update_data->bindValue(':Deposit', $_deposit, SQLITE3_FLOAT);
             $SQL_update_data->bindValue(':Balance', $_balance, SQLITE3_FLOAT);
+            $SQL_update_data->bindValue(':Category', $category, SQLITE3_TEXT);
             
             // Execute the query
-            $resultSet = $SQL_update_data->execute();
+            $SQL_update_data->execute();
             
             $db->close();
 
-            return $resultSet;
+            return '../landing/landing.php';
         }
     }
 

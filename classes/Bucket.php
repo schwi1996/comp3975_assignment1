@@ -7,7 +7,7 @@
             $this->$_vendor = $_vendor;
             $this->$_category = $_category;
         }
-
+        
         public static function deleteBucket($_id) {
             include("../../connect_database.php");
 
@@ -91,6 +91,51 @@
             if ($stmt) {
                 return;
             }
+        }
+
+        public static function displayBucket($_id) {
+            include(__DIR__ . "/../connect_database.php");
+
+            $version = $db->querySingle('SELECT SQLITE_VERSION()');
+
+            $tableName = 'Buckets';
+
+            // Check if ID exists
+            $checkDuplicateQuery = "SELECT COUNT(*) AS 'rowCount' FROM $tableName WHERE id= ?";
+            $checkStmt = $db->prepare($checkDuplicateQuery);
+            $checkStmt->bindParam(1, $_id, SQLITE3_TEXT);
+            $result = $checkStmt->execute();
+            $rowCount = $result->fetchArray(SQLITE3_NUM);
+            $rowCount = $rowCount[0];
+
+
+            if ($rowCount == 0) {
+                // The specified ID doesn't exist in the database
+                echo "<p class='alert alert-danger'>Bucket entry with ID $_id does not exist.</p>";
+                echo "<a href='../landing/landing.php' class='btn btn-small btn-primary'>&lt;&lt; BACK</a>";
+                exit;
+            }
+
+            // Fetch transaction details
+            $fetchQuery = "SELECT * FROM $tableName WHERE id = ?";
+            $fetchStmt = $db->prepare($fetchQuery);
+            $fetchStmt->bindParam(1, $_id, SQLITE3_TEXT);
+            $result = $fetchStmt->execute();
+            $row = $result->fetchArray(SQLITE3_ASSOC);
+
+            // Assign values to variables
+            $id= $row['id'];
+            $Vendor= $row['Vendor'];
+            $Category= $row['Category'];
+
+            $db->close();
+
+            return [
+                'Bucket_id' => $id,
+                'Vendor' => $Vendor,
+                'Category' => $Category
+            ];
+           
         }
     }
 

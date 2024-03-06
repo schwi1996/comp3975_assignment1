@@ -4,6 +4,9 @@
 include("connect_database.php");
 require_once("vendor/autoload.php");
 require("custom_error_handler.inc.php");
+spl_autoload_register(function($className) {
+    require_once("classes/$className.php");
+});
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -44,21 +47,28 @@ $SQL_create_table = "CREATE TABLE IF NOT EXISTS Transactions (
     Vendor TEXT NOT NULL,
     Spend REAL,
     Deposit REAL,
-    Balance REAL
+    Balance REAL,
+    Category TEXT NOT NULL
 );";
 
 $db->exec($SQL_create_table);
 
 $SQL_create_buckets = "CREATE TABLE IF NOT EXISTS Buckets (
-    id INTEGER,
-    Date TEXT NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     Vendor TEXT NOT NULL,
-    Category TEXT NOT NULL,
-    Spend REAL,
-    FOREIGN KEY (id) REFERENCES Transactions(TransactionId)
+    Category TEXT NOT NULL
 );";
 
 $db->exec($SQL_create_buckets);
+
+// check if bucket is empty
+$checkBucket = "SELECT COUNT(*) as count FROM Buckets";
+$result = $db->querySingle($checkBucket);
+if ($result == 0) {
+    // Insert default buckets
+    Bucket::loadDefaultBuckets($db);
+}
+
 
 $db->close();
 

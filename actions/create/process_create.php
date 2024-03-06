@@ -13,9 +13,8 @@
         $Deposit = sanitize_input($Deposit);
         $Balance = sanitize_input($Balance);
         
-        $id = Transaction::insertTransaction($Date, $Vendor, $Spend, $Deposit, $Balance);
+        $resultSet = Transaction::insertTransaction($Date, $Vendor, $Spend, $Deposit, $Balance);
         $organizeResult = Transaction::updateBalance();
-        $resultSet = Bucket::singleSortBucket($id, $Date, $Vendor, $Spend);
 
         header('Location: ' . $resultSet);
     }

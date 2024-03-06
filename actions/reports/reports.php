@@ -23,7 +23,7 @@
 <?php 
     if (isset($_POST['year'])) {
         $year = $_POST['year'];
-        $tableName = "Buckets";
+        $tableName = "Transactions";
 
         $checkYear = "SELECT Category, SUM(Spend) as totalSpend FROM $tableName WHERE SUBSTR(Date, 1, 4) = :year GROUP BY Category";
         $stmt = $db->prepare($checkYear);

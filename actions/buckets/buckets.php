@@ -17,6 +17,9 @@ $resultSet = $db->query('SELECT * FROM Transactions');
 
 if ($resultSet->fetchArray() === false) {
     echo '<div class="form-group">';
+    if ($_SESSION['role'] === 'admin') {
+        echo '<a href="../admin/action_buckets/add_bucket.php" class="btn btn-small btn-success" style="margin-right: 8px;">Add Bucket</a>';
+    }
     echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
     echo '</div>';
     
@@ -25,13 +28,14 @@ if ($resultSet->fetchArray() === false) {
     
 } else {
     echo '<div class="form-group">';
+    if ($_SESSION['role'] === 'admin') {
+        echo '<a href="../admin/action_buckets/add_bucket.php" class="btn btn-small btn-success" style="margin-right: 8px;">Add Bucket</a>';
+    }
     echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
     echo '</div>';
     
     // Transactions exist
     include("process_buckets.php");
-
-    
 }
 
 $db->close();

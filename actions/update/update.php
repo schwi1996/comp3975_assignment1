@@ -7,6 +7,7 @@ include("../../setup/inc_header.php"); ?>
 
 <?php
     $error_message = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
+    $TransactionId = $Date = $Vendor = $Spend = $Deposit = $Balance = ''; // Initialize variables
     if (isset($_GET['id'])) {
 
         spl_autoload_register(function($className) {

@@ -41,27 +41,27 @@ include("../../setup/inc_header.php"); ?>
 
             <div class="form-group">
                 <label for="Date" class="control-label">Date</label>
-                <input for="Date" class="form-control" name="Date" id="Date" value="<?php echo $Date; ?>" required />
+                <input type="text" class="form-control" name="Date" id="Date" value="<?php echo $Date; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Vendor" class="control-label">Vendor</label>
-                <input for="Vendor" class="form-control" name="Vendor" id="Vendor" value="<?php echo $Vendor; ?>" required />
+                <input type="text" class="form-control" name="Vendor" id="Vendor" value="<?php echo $Vendor; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Spend" class="control-label">Spend</label>
-                <input for="Spend" class="form-control" name="Spend" id="Spend" value="<?php echo $Spend; ?>" required />
+                <input type="text" class="form-control" name="Spend" id="Spend" value="<?php echo $Spend; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Deposit" class="control-label">Deposit</label>
-                <input for="Deposit" class="form-control" name="Deposit" id="Deposit" value="<?php echo $Deposit; ?>" required />
+                <input type="text" class="form-control" name="Deposit" id="Deposit" value="<?php echo $Deposit; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Balance" class="control-label">Balance</label>
-                <input for="Balance" class="form-control" name="Balance" id="Balance" value="<?php echo $Balance; ?>" required />
+                <input type="text" class="form-control" name="Balance" id="Balance" value="<?php echo $Balance; ?>" required />
             </div>
 
             <div class="form-group">

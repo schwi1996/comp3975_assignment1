@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 require_once('../../custom_error_handler.inc.php');
 require_once('../../connect_database.php');

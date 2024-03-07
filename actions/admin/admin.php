@@ -1,5 +1,4 @@
 <?php
-include("../../setup/inc_header.php");
 require_once('../../setup/config_session.inc.php');
 require_once('../../custom_error_handler.inc.php');
 require_once('../../connect_database.php');
@@ -9,6 +8,7 @@ if ($_SESSION['role'] !== 'admin') {
     exit();
 }
 
+include("../../setup/inc_header.php");
 ?>
 
 <h1>Welcome Back Admin!</h1>    

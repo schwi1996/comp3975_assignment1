@@ -6,7 +6,7 @@ ini_set('session.use_strict_mode', 1);
 session_set_cookie_params(( [
     'lifetime' => 3 * 60 * 60, // 3 houea
     'path' => '/',
-    'domain' => 'localhost',
+    'domain' => 'https://comp3975-assignment1.azurewebsites.net/',
     'secure' => true,
     'httponly' => true
 ]));

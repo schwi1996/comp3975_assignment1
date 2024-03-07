@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $resultSet = Bucket::deleteBucket($bucketId);
     
     if ($resultSet) {
-        echo "Bucket deleted successfully.";
         header("Location: ../../buckets/buckets.php");
     }
 } else {

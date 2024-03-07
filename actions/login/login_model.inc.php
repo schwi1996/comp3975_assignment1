@@ -24,12 +24,10 @@ function is_credentials_correct(object $db, string $email, string $inputPassword
 
     // If the email exists in the database
     if ($row) {
-        echo 'User found. Validating password...';
 
         $storedPassword = $row['password']; 
 
         if (password_verify($inputPassword, $storedPassword)) {
-            echo 'Password verified.';
             return true;
         } else {
             return false;

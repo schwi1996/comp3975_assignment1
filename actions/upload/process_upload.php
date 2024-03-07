@@ -53,9 +53,6 @@ function process_CSV_file($file, $db, $dir) {
 
         $file_name = pathinfo($file['name'], PATHINFO_FILENAME);
         $path = $dir .  '/' . $file_name . '.imported';
-        if (!move_uploaded_file($file['tmp_name'], $path)) {
-            echo "Error: Unable to move file.";
-        }
     }
 }
 
@@ -77,7 +74,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: /actions/upload/upload.php');
         die();
     }
-} else {
-    echo "Error: Invalid request.";
 }
 ?>

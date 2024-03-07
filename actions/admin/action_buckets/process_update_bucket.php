@@ -23,13 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         unset($_SESSION['Vendor']);
         unset($_SESSION['Category']);
 
-        echo "Bucket updated successfully.";
         header("Location: ../../buckets/buckets.php");
-    } else {
-        echo "Error updating bucket.";
     }
 } else {
-    echo "Invalid request.";
     header("Location: ../../buckets/buckets.php");
 }
 

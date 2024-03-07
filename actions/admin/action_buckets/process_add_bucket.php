@@ -12,10 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultSet = Bucket::addBucket($vendor, $category);
 
     if ($resultSet) {
-        echo "New bucket added successfully.";
         header("Location: ../../buckets/buckets.php");
-    } else {
-        echo "Error: Could not add new bucket.";
     }
 }
 

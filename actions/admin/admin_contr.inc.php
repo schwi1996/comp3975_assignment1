@@ -14,14 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = update_verified_status($db, $userId, $verifiedStatus);
 
             if (!$result) {
-                echo "Error updating user with ID: " . $userId;
                 exit();
             }
         }
-
-        echo "All updates successful";
-    } else {
-        echo "No data received";
     }
     exit();
 }

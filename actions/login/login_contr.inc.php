@@ -12,7 +12,7 @@ function is_input_empty(string $email, string $password) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    ob_start();
+
     error_log('POST request received. Processing...');
 
     require_once('../../setup/config_session.inc.php');
@@ -54,8 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['first_name'] = $user_details['first_name'];
         $_SESSION['last_name'] = $user_details['last_name'];
         $_SESSION['role'] = $user_details['role'];
-
-        ob_end_flush();
         
         header('Location: ../landing/landing.php');
         exit();

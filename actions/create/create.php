@@ -29,17 +29,17 @@ include("../../setup/inc_header.php");
 
             <div class="form-group">
                 <label for="Spend" class="control-label">Spend</label>
-                <input for="Spend" class="form-control" name="Spend" id="Spend"/>
+                <input for="Spend" class="form-control" name="Spend" id="Spend" required/>
             </div>
 
             <div class="form-group">
                 <label for="Deposit" class="control-label">Deposit</label>
-                <input for="Deposit" class="form-control" name="Deposit" id="Deposit"/>
+                <input for="Deposit" class="form-control" name="Deposit" id="Deposit" required/>
             </div>
 
             <div class="form-group">
                 <label for="Balance" class="control-label">Balance</label>
-                <input for="Balance" class="form-control" name="Balance" id="Balance"/>
+                <input for="Balance" class="form-control" name="Balance" id="Balance" required/>
             </div>
 
             <div class="form-group">

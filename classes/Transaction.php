@@ -27,6 +27,11 @@
                 return 'create.php?error=Date format incorrect. Please use YYYY-MM-DD format.';
             }
 
+            // Validate $_spend, $_deposit, $_balance as floats
+            if (!is_numeric($_spend) || !is_numeric($_deposit) || !is_numeric($_balance)) {
+                return 'create.php?error=Spend, Deposit, and Balance must be valid numeric values.';
+            }
+
             $formattedDate = $dateCheck->format('Y-m-d');
             $category = Bucket::singleSortBucket($_vendor);
             $SQL_insert_data = $db->prepare("INSERT INTO $tableName (Date, Vendor, Spend, Deposit, Balance, Category) VALUES (:Date, :Vendor, :Spend, :Deposit, :Balance, :Category)");
@@ -246,12 +251,17 @@
 
             $dateCheck = DateTime::createFromFormat('Y-m-d', $_date);
             if ($dateCheck === false) {
-                return 'update.php?id=' . $_id . '&error=Date format incorrect. Please use YYYY-MM-DD format.';
+                return 'update.php?id=' . $_id . '?error=Date format incorrect. Please use YYYY-MM-DD format.';
             }
         
             $errors = $dateCheck::getLastErrors();
             if ($errors['warning_count'] > 0 || $errors['error_count'] > 0) {
-                return 'update.php?id=' . $_id . '&error=Date format incorrect. Please use YYYY-MM-DD format.';
+                return 'update.php?id=' . $_id . '?error=Date format incorrect. Please use YYYY-MM-DD format.';
+            }
+
+            // Validate $_spend, $_deposit, $_balance as floats
+            if (!is_numeric($_spend) || !is_numeric($_deposit) || !is_numeric($_balance)) {
+                return 'update.php?' . $_id . '?error=Spend, Deposit, and Balance must be valid numeric values.';
             }
 
             $formattedDate = $dateCheck->format('Y-m-d');

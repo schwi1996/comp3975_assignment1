@@ -25,8 +25,12 @@ include("../../setup/inc_header.php"); ?>
 
 <div class="row">
     <div class="col-md-4">
+        <?php if (!empty($error_message)): ?>
+            <div class="alert alert-danger">
+                <?php echo htmlspecialchars($error_message); ?>
+            </div>
+        <?php endif; ?>
         <form action="process_update.php" method="post">
-
             <div class="form-group">
                 <input type="hidden" value="<?php echo $TransactionId ?>" name="TransactionId" />
                 <label class="control-label">ID: </label>
@@ -35,27 +39,27 @@ include("../../setup/inc_header.php"); ?>
 
             <div class="form-group">
                 <label for="Date" class="control-label">Date</label>
-                <input for="Date" class="form-control" name="Date" id="Date" value="<?php echo $Date; ?>" />
+                <input for="Date" class="form-control" name="Date" id="Date" value="<?php echo $Date; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Vendor" class="control-label">Vendor</label>
-                <input for="Vendor" class="form-control" name="Vendor" id="Vendor" value="<?php echo $Vendor; ?>" />
+                <input for="Vendor" class="form-control" name="Vendor" id="Vendor" value="<?php echo $Vendor; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Spend" class="control-label">Spend</label>
-                <input for="Spend" class="form-control" name="Spend" id="Spend" value="<?php echo $Spend; ?>" />
+                <input for="Spend" class="form-control" name="Spend" id="Spend" value="<?php echo $Spend; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Deposit" class="control-label">Deposit</label>
-                <input for="Deposit" class="form-control" name="Deposit" id="Deposit" value="<?php echo $Deposit; ?>" />
+                <input for="Deposit" class="form-control" name="Deposit" id="Deposit" value="<?php echo $Deposit; ?>" required />
             </div>
 
             <div class="form-group">
                 <label for="Balance" class="control-label">Balance</label>
-                <input for="Balance" class="form-control" name="Balance" id="Balance" value="<?php echo $Balance; ?>" />
+                <input for="Balance" class="form-control" name="Balance" id="Balance" value="<?php echo $Balance; ?>" required />
             </div>
 
             <div class="form-group">

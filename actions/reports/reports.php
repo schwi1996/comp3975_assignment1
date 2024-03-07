@@ -1,7 +1,8 @@
-<?php include("../../setup/inc_header.php"); ?>
 <?php 
-    include("../../utils.php");
-    include("../../connect_database.php");
+include("../../setup/inc_header.php"); 
+include("../../setup/config_session.inc.php");
+include("../../utils.php");
+include("../../connect_database.php");
 ?>
 
 <h1>View Reports</h1>

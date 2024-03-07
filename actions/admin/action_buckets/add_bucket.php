@@ -10,12 +10,7 @@ if (($_SESSION['role']) !== 'admin') {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add New Bucket</title>
-</head>
-<body>
+
     <h1>Add New Bucket</h1>
 
     <?php
@@ -39,5 +34,5 @@ if (($_SESSION['role']) !== 'admin') {
         <button type="submit" class="btn btn-success">Save</button>
         <button type="button" class="btn btn-primary" onclick="window.location.href='../../buckets/buckets.php'">Back</button>
     </form>
-</body>
-</html>
+
+<?php include("../../../setup/inc_footer.php"); ?>

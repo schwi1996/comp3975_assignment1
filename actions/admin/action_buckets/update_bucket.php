@@ -54,9 +54,9 @@ if (isset($_GET['id'])) {
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Update" name="update" class="btn btn-warning" />
+                <a href="../../buckets/buckets.php" class="btn btn-small btn-primary">BACK</a>    
                 &nbsp;&nbsp;&nbsp;
-                <a href="../../buckets/buckets.php" class="btn btn-small btn-primary">BACK</a>
+                <input type="submit" value="Update" name="update" class="btn btn-warning" />
             </div>
         </form>
     </div>

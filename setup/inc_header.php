@@ -9,9 +9,6 @@
 </head>
 <body>
 <div style="width: 80%; margin: auto;">
-    <!-- <a href="/">
-        <img src="/images/bcit_banner904x150.png" alt="BCIT Banner" />
-    </a> -->
 </div>
 </br>
 </br>

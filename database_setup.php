@@ -6,12 +6,15 @@ spl_autoload_register(function($className) {
     require_once("classes/$className.php");
 });
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+if ($_SERVER['APP_ENV'] !== 'production') {
+    // Load .env file in non-production environments
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
 
 // Credentials for admin user
-$admin_email = $_ENV['ADMIN_EMAIL'];
-$admin_password = password_hash($_ENV['ADMIN_PASSWORD'], PASSWORD_BCRYPT); 
+$admin_email = getenv('ADMIN_EMAIL');
+$admin_password = password_hash(getenv('ADMIN_PASSWORD'), PASSWORD_BCRYPT); 
 
 $version = $db->querySingle('SELECT SQLITE_VERSION()');
 

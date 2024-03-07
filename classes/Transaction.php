@@ -138,17 +138,32 @@
             $db->close();
         }
 
-        public static function updateCategory($id, $category) {
+        public static function updateCategory() {
             // update the category of the transaction id
-            include("../../connect_database.php");
+            include(__DIR__ . "/../connect_database.php");
             $tableName = 'Transactions';
 
-            $SQL_update_data = $db->prepare("UPDATE $tableName SET Category = :Category WHERE TransactionId = :TransactionId");
-            $SQL_update_data->bindValue(':TransactionId', $id, SQLITE3_INTEGER);
-            $SQL_update_data->bindValue(':Category', $category, SQLITE3_TEXT);
-            $resultSet = $SQL_update_data->execute();
+            $query = "SELECT * FROM $tableName";
+            $stmt = $db->prepare($query);
+            $resultOuter = $stmt->execute();
+
+            while ($row = $resultOuter->fetchArray(SQLITE3_ASSOC)) {
+                $newCategory = Bucket::singleSortBucket($row['Vendor']);
+                $id = $row['TransactionId'];
+                $SQL_update_data = $db->prepare("UPDATE $tableName SET Category = :Category WHERE TransactionId = :TransactionId");
+                $SQL_update_data->bindValue(':TransactionId', $id, SQLITE3_INTEGER);
+                $SQL_update_data->bindValue(':Category', $newCategory, SQLITE3_TEXT);
+                $resultInner = $SQL_update_data->execute();
+
+                if(!$resultInner) {
+                    $db->close();
+                    return false;
+                }
+            }
+
             $db->close();
-            return $resultSet;
+
+            return true;
         }
 
         public static function printTransactions() {

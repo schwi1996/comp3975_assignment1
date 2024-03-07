@@ -8,29 +8,8 @@
             $this->$_category = $_category;
         }
         
-        public static function deleteBucket($_id) {
-            include("../../connect_database.php");
-
-            $version = $db->querySingle('SELECT SQLITE_VERSION()');
-
-            $tableName = 'Buckets';
-
-            // Prepare and execute the INSERT query
-            $SQL_delete_data = $db->prepare("DELETE FROM $tableName WHERE id = :TransactionId");
-        
-            // Bind parameters
-            $SQL_delete_data->bindValue(':TransactionId', $_id, SQLITE3_INTEGER);
-        
-            // Execute the query
-            $resultSet = $SQL_delete_data->execute();
-
-            $db->close();
-
-            return $resultSet;
-        }
-
         public static function singleSortBucket($_vendor) {
-            include("../../connect_database.php");
+            include(__DIR__ . "/../connect_database.php");
 
             $version = $db->querySingle('SELECT SQLITE_VERSION()');
             // if ($_spend == NULL || $_spend == 0) {
@@ -137,7 +116,90 @@
             ];
            
         }
+
+        public static function addBucket($vendor, $category) {
+            include(__DIR__ . "/../connect_database.php");
+            if (empty($vendor) || empty($category)) {
+                $_SESSION['error'] = "Error: All fields are required.";
+                header("Location: add_bucket.php");
+                die();
+            }
+        
+            $check_duplicate_key = $db->querySingle("SELECT COUNT(*) as count FROM Buckets WHERE Vendor = '$vendor'");
+            if ($check_duplicate_key > 0) {
+                $_SESSION['error'] = "Error: Vendor is already paired with a category.";
+                header("Location: add_bucket.php");
+                die();
+            }
+        
+            $stmt = $db->prepare("INSERT INTO Buckets (Vendor, Category) VALUES (:vendor, :category)");
+        
+            $stmt->bindValue(':vendor', $vendor, SQLITE3_TEXT);
+            $stmt->bindValue(':category', $category, SQLITE3_TEXT);
+
+            $result = $stmt->execute();
+
+            if ($result) {
+                $updateResult = Transaction::updateCategory();
+            }
+
+
+            $db->close();
+
+            return $result && $updateResult;
+        }
+
+        public static function updateBucket($id, $vendor, $category) {
+            include(__DIR__ . "/../connect_database.php");
+            // check if vendor and category are empty
+            if (empty($vendor) || empty($category)) {
+                $_SESSION['error'] = "Error: All fields are required.";
+                header("Location: update_bucket.php");
+                die();
+            }
+
+            // check if vendor is already paired with a category
+            // $check_duplicate_key = $db->querySingle("SELECT COUNT(*) as count FROM Buckets WHERE LOWER($vendor) LIKE LOWER('%' || Vendor || '%') AND id != $id");
+            $stmt = $db->prepare("SELECT COUNT(*) as count FROM Buckets WHERE LOWER(Vendor) LIKE LOWER(:vendor) AND id != :id");
+            $stmt->bindValue(':vendor', '%' . $vendor . '%', SQLITE3_TEXT);
+            $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+            $check_duplicate_key = $stmt->execute()->fetchArray(SQLITE3_ASSOC)['count'];
+            if ($check_duplicate_key > 0) {
+                $_SESSION['error'] = "Error: Vendor is already paired with a category.";
+                header("Location: update_bucket.php");
+                die();
+            }
+            
+            $stmt = $db->prepare("UPDATE Buckets SET Vendor = :vendor, Category = :category WHERE id = :id");
+            $stmt->bindValue(':vendor', $vendor, SQLITE3_TEXT);
+            $stmt->bindValue(':category', $category, SQLITE3_TEXT);
+            $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+            $result = $stmt->execute();
+
+            if ($result) {
+                $updateResult = Transaction::updateCategory();
+            }
+
+            $db->close();
+
+            // var_dump($result);
+            // var_dump($updateResult);
+            return $result && $updateResult;
+        }
+
+        public static function deleteBucket($id) {
+            include(__DIR__ . "/../connect_database.php");
+            $stmt = $db->prepare("DELETE FROM Buckets WHERE id = :id");
+            $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
+            $result = $stmt->execute();
+
+            if ($result) {
+                $updateResult = Transaction::updateCategory();
+            }
+
+            $db->close();
+
+            return $result && $updateResult;
+        }
     }
-
-
 ?>

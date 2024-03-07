@@ -13,7 +13,7 @@
 <form action="" method="post">
     <label for="year">Select Year:</label>
     <select id="year" name="year">
-        <?php for($i = date('Y'); $i >= 1970; $i--): ?>
+        <?php for($i = date('Y'); $i >= 0; $i--): ?>
             <option value="<?php echo $i; ?>" <?php if(isset($_POST['year']) && $_POST['year'] == $i) echo 'selected'; ?>><?php echo $i; ?></option>
         <?php endfor; ?>
     </select>
@@ -21,15 +21,20 @@
 </form>
 
 <?php 
+    $overallTotal = 0;
     if (isset($_POST['year'])) {
         $year = $_POST['year'];
+        $formattedYear = sprintf('%04d', $year);
         $tableName = "Transactions";
 
         $checkYear = "SELECT Category, SUM(Spend) as totalSpend FROM $tableName WHERE SUBSTR(Date, 1, 4) = :year GROUP BY Category";
         $stmt = $db->prepare($checkYear);
-        $stmt->bindValue(':year', $year, SQLITE3_TEXT);
+        $stmt->bindValue(':year', $formattedYear, SQLITE3_TEXT);
         $resultSet = $stmt->execute();
-
+        // add up all the totalSpend
+        while ($row = $resultSet->fetchArray(SQLITE3_ASSOC)) {
+            $overallTotal += $row['totalSpend'];
+        }
         $dataPoints = [];
         while ($row = $resultSet->fetchArray(SQLITE3_ASSOC)) {
             $dataPoints[] = array("label" => $row['Category'], "y" => $row['totalSpend']);
@@ -39,7 +44,7 @@
     $db->close();
 ?>
 
-<?php if (!empty($dataPoints)): ?> <!-- Check if $dataPoints is not empty -->
+<?php if (!empty($dataPoints) && $overallTotal > 0): ?> <!-- Check if $dataPoints is not empty/0 -->
     <script>
         window.onload = function() {
             var chart = new CanvasJS.Chart("chartContainer", {
@@ -77,7 +82,9 @@
     </div>
 <?php else: ?>
     </br>
-    <p>No transactions recorded for the selected year.</p>
+    <?php if (isset($_POST['year'])): ?>
+        <p>No spendings recorded for the selected year.</p>
+    <?php endif; ?>
 <?php endif; ?>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <?php include("../../setup/inc_footer.php"); ?>

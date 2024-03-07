@@ -13,7 +13,7 @@ include("../../connect_database.php");
 
 $version = $db->querySingle('SELECT SQLITE_VERSION()');
 // Fetch all transactions
-$resultSet = $db->query('SELECT * FROM Transactions');
+$resultSet = $db->query('SELECT * FROM Buckets');
 
 if ($resultSet->fetchArray() === false) {
     echo '<div class="form-group">';
@@ -23,8 +23,8 @@ if ($resultSet->fetchArray() === false) {
     echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
     echo '</div>';
     
-    // No transactions
-    echo "<p>No transactions have been made yet.</p>";
+    // No buckets exist
+    echo "<p>No buckets have been made yet.</p>";
     
 } else {
     echo '<div class="form-group">';
@@ -34,7 +34,7 @@ if ($resultSet->fetchArray() === false) {
     echo '<a href="../landing/landing.php" class="btn btn-small btn-primary">BACK</a>';
     echo '</div>';
     
-    // Transactions exist
+    // Buckets exist
     include("process_buckets.php");
 }
 

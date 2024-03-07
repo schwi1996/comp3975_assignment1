@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once("../../setup/inc_header.php");
 require_once('../../custom_error_handler.inc.php');
 require_once('../../connect_database.php');
 spl_autoload_register(function($className) {
     require_once("../../classes/$className.php");
 });
+require_once("../../setup/inc_header.php");
 
 function check_file_type($file) {
     $file_type = pathinfo($file['name'], PATHINFO_EXTENSION);
@@ -66,13 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         process_CSV_file($_FILES['csvFile'], $db, $imports_dir);
         $organizeResult = Transaction::updateBalance();
         
-        header('Location: /actions/landing/landing.php');
-      
         $db -> close();
+        header('Location: /actions/landing/landing.php');
+        exit();
     } else {
         $_SESSION['error'] = "Please select a file to upload.";
         header('Location: /actions/upload/upload.php');
-        die();
+        exit();
     }
 }
 ?>

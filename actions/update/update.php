@@ -6,6 +6,7 @@ include("../../setup/inc_header.php"); ?>
 <h1>Update Transaction</h1>
 
 <?php
+    $error_message = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
     if (isset($_GET['id'])) {
 
         spl_autoload_register(function($className) {
@@ -26,8 +27,9 @@ include("../../setup/inc_header.php"); ?>
 <div class="row">
     <div class="col-md-4">
         <?php if (!empty($error_message)): ?>
+            <!-- Display error message as a pop-up -->
             <div class="alert alert-danger">
-                <?php echo htmlspecialchars($error_message); ?>
+                <?php echo $error_message; ?>
             </div>
         <?php endif; ?>
         <form action="process_update.php" method="post">
